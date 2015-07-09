@@ -85,7 +85,7 @@ sum(! complete.cases(dat))
 dat <- dat[steps.interval][is.na(steps), steps:=V1][, V1:=NULL]
 
 # Calculate the total number of steps taken per day
-steps.date <- dat[, sum(steps, na.rm = TRUE), by = date][, V1]
+steps.date <- dat[, sum(steps), by = date][, V1]
 
 # Plot histogram of the total number of steps taken each day
 hist(steps.date,
