@@ -242,7 +242,7 @@ summary(dat)
 <h2>What is mean total number of steps taken per day?</h2>
 
 <pre><code class="r"># Calculate the total number of steps taken per day
-total.steps &lt;- dat[, sum(steps, na.rm = TRUE), by = date][,V1]
+total.steps &lt;- dat[, sum(steps, na.rm = TRUE), by = date][, V1]
 
 # Plot histogram of the total number of steps taken each day
 hist(total.steps,

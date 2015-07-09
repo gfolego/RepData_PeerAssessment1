@@ -29,7 +29,7 @@
 #   https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
 
 
-library(knitr)
+library("knitr")
 knit2html("PA1_template.Rmd")
 browseURL("PA1_template.html")
 

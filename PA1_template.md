@@ -52,7 +52,7 @@ summary(dat)
 
 ```r
 # Calculate the total number of steps taken per day
-total.steps <- dat[, sum(steps, na.rm = TRUE), by = date][,V1]
+total.steps <- dat[, sum(steps, na.rm = TRUE), by = date][, V1]
 
 # Plot histogram of the total number of steps taken each day
 hist(total.steps,
