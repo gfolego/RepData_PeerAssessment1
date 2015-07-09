@@ -30,8 +30,7 @@ dat <- unz(file.zip, file.csv) %>%
        read.csv(as.is = TRUE,
                 colClasses = c("integer", "Date", "integer"),
                 check.names = FALSE) %>%
-       data.table %>%
-       setkey(date, interval)
+       data.table
 
 # Print data summary
 summary(dat)
@@ -59,7 +58,7 @@ totalsteps <- dat[, sum(steps, na.rm = TRUE), by = date][,V1]
 hist(totalsteps,
      main = "Total steps",
      xlab = "Number of steps",
-     col = "red")
+     col = "lightblue3")
 ```
 
 ![plot of chunk meansteps](figure/meansteps-1.png) 
