@@ -52,11 +52,11 @@ summary(dat)
 
 ```r
 # Calculate the total number of steps taken per day
-totalsteps <- dat[, sum(steps, na.rm = TRUE), by = date][,V1]
+total.steps <- dat[, sum(steps, na.rm = TRUE), by = date][,V1]
 
 # Plot histogram of the total number of steps taken each day
-hist(totalsteps,
-     main = "Total steps",
+hist(total.steps,
+     main = "Total daily steps",
      xlab = "Number of steps",
      col = "lightblue3")
 ```
@@ -65,7 +65,7 @@ hist(totalsteps,
 
 ```r
 # Calculate the mean and median of the total number of steps taken per day
-mean(totalsteps)
+mean(total.steps)
 ```
 
 ```
@@ -73,7 +73,7 @@ mean(totalsteps)
 ```
 
 ```r
-median(totalsteps)
+median(total.steps)
 ```
 
 ```
