@@ -250,20 +250,7 @@ Again, please ignore the date in the *interval* variable.
 ```r
 # Calculate
 steps.day <- dat[, mean(steps), by = list(interval, day)]
-summary(steps.day)
-```
 
-```
-##     interval                        day            V1         
-##  Min.   :2015-07-10 00:00:00   weekday:288   Min.   :  0.000  
-##  1st Qu.:2015-07-10 05:58:45   weekend:288   1st Qu.:  2.047  
-##  Median :2015-07-10 11:57:30                 Median : 28.133  
-##  Mean   :2015-07-10 11:57:30                 Mean   : 38.988  
-##  3rd Qu.:2015-07-10 17:56:15                 3rd Qu.: 61.263  
-##  Max.   :2015-07-10 23:55:00                 Max.   :230.378
-```
-
-```r
 # Make a panel plot
 with(steps.day, xyplot(V1 ~ interval | day,
                        type = "l",

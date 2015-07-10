@@ -173,7 +173,6 @@ Again, please ignore the date in the *interval* variable.
 ```{r weekday2, fig.width=8}
 # Calculate
 steps.day <- dat[, mean(steps), by = list(interval, day)]
-summary(steps.day)
 
 # Make a panel plot
 with(steps.day, xyplot(V1 ~ interval | day,
